@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: #4d4d4d;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    align-items: center;
+    
+  }
+  
+
+   a {
+   color: white;
+  }
+  
