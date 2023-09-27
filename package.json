@@ -3,14 +3,6 @@
   "scripts": {
     "start": "npm-run-all -p \"start -w app1\" \"start -w app2\" \"start -w shell\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nebarf/module-federation-react-router-dom.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nebarf/module-federation-react-router-dom/issues"
-  },
-  "homepage": "https://github.com/nebarf/module-federation-react-router-dom#readme",
   "workspaces": [
     "app1",
     "app2",
