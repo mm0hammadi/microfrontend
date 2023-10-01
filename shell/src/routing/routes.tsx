@@ -7,6 +7,7 @@ const App1Lazy = lazy(() => import("../components/App1"));
 const App2Lazy = lazy(() => import("../components/App2"));
 
 export const routes: RouteObject[] = [
+  
   {
     path: '/',
     element: <Layout />,
