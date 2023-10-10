@@ -1,4 +1,4 @@
-import { mount } from "dashboard/DashboardApp";
+import { mount } from "bach/DashboardApp";
 import React, { useRef, useEffect } from "react";
 
 const DashboardApp = () => {
