@@ -14,9 +14,9 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        cards: `cards@${domain}/cards/latest/remoteEntry.js`,
+        card: `card@${domain}/card/latest/remoteEntry.js`,
         auth: `auth@${domain}/auth/latest/remoteEntry.js`,
-       bach: `bach@${domain}/bach/latest/remoteEntry.js`,
+        batch: `batch@${domain}/batch/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),

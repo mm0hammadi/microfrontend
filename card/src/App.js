@@ -8,7 +8,7 @@ import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
 
 const generateClassName = createGenerateClassName({
-  productionPrefix: "marketing-app",
+  productionPrefix: "card-app",
 });
 
 const App = ({ history }) => {
@@ -16,8 +16,8 @@ const App = ({ history }) => {
     <Router history={history}>
       <StylesProvider generateClassName={generateClassName}>
         <Switch>
-          <Route exact path="/pricing" component={Pricing} />
-          <Route path="/" component={Landing} />
+          <Route exact path="/" component={Pricing} />
+          {/* <Route path="/" component={Landing} /> */}
         </Switch>
       </StylesProvider>
     </Router>

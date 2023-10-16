@@ -8,9 +8,9 @@ import {
 import Progress from "./components/Progress";
 import { createBrowserHistory } from "history";
 
-const MarketingLazy = lazy(() => import("./components/MarketingApp"));
+const CardLazy = lazy(() => import("./components/CardApp"));
 const AuthLazy = lazy(() => import("./components/AuthApp"));
-const DashboardLazy = lazy(() => import("./components/DashboardApp"));
+const BatchLazy = lazy(() => import("./components/BatchApp"));
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "container-app",
@@ -36,11 +36,9 @@ const App = () => {
             <Route path="/auth">
               <AuthLazy onSignIn={() => setSignIn(true)} />
             </Route>
-            <Route path="/dashboard">
-              {!isSignedIn && <Redirect to="/"/>}
-              <DashboardLazy />
-            </Route>
-            <Route path="/" component={MarketingLazy} />
+            {/* <Route path="/auth/signup" component={AuthLazy} /> */}
+            <Route path="/" component={CardLazy} />
+            <Route path="/" component={BatchLazy} />
           </Switch>
         </Suspense>
       </StylesProvider>

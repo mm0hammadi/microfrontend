@@ -1,1 +1,21 @@
-# microfrontend design
+# Micro Frontend - React.js
+
+
+اجرای برنامه : 
+
+برای اجرا میتوانید پروژه ارسالی در پیوست را دانلود کرده و اکسترکت کنید. 
+  برای اجرای هر پروژه ، ترمینال را به پروژه مورد نظر ببرید .
+
+\microfrontEnd-Project\container> npm install   >  npm start  
+  container > http://localhost:8080/     
+
+\microfrontEnd-Project\batch>npm install  >  npm start
+batch > http://localhost:8082/
+
+\microfrontEnd-Project\card>npm install  >  npm start
+card > http://localhost:8081/
+
+\microfrontEnd-Project\auth>npm install  >  npm start
+auth > http://localhost:8083/
+
+

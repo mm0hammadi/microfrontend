@@ -7,14 +7,14 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "/bach/latest",
+    publicPath: "/batch/latest",
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "bach",
+      name: "batch",
       filename: "remoteEntry.js",
       exposes: {
-        "./MarketingApp": "./src/bootstrap",
+        "./BatchApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
     }),

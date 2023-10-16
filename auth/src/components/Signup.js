@@ -57,7 +57,7 @@ export default function SignUp({ onSignIn }) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          ثبت نام
         </Typography>
         <form
           onSubmit={(e) => e.preventDefault()}
@@ -73,7 +73,7 @@ export default function SignUp({ onSignIn }) {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label="نام"
                 autoFocus
               />
             </Grid>
@@ -83,7 +83,7 @@ export default function SignUp({ onSignIn }) {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
+                label="نام"
                 name="lastName"
                 autoComplete="lname"
               />
@@ -94,7 +94,7 @@ export default function SignUp({ onSignIn }) {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="ایمیل"
                 name="email"
                 autoComplete="email"
               />
@@ -105,18 +105,18 @@ export default function SignUp({ onSignIn }) {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="رمز"
                 type="password"
                 id="password"
                 autoComplete="current-password"
               />
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="I want to receive inspiration, marketing promotions and updates via email."
               />
-            </Grid>
+            </Grid> */}
           </Grid>
           <Button
             type="submit"
@@ -126,11 +126,11 @@ export default function SignUp({ onSignIn }) {
             className={classes.submit}
             onClick={onSignIn}
           >
-            Sign Up
+            ثبت نام
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link to="/auth/signin">Already have an account? Sign in</Link>
+              <Link to="/auth/signin">اکانت دارید?ورود</Link>
             </Grid>
           </Grid>
         </form>

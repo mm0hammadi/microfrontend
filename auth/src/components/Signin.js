@@ -25,8 +25,6 @@ function Copyright() {
   );
 }
 
-
-
 const useStyles = makeStyles((theme) => ({
   '@global': {
     a: {
@@ -62,7 +60,7 @@ export default function SignIn({ onSignIn }) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+         ورود
         </Typography>
         <form
           onSubmit={(e) => e.preventDefault()}
@@ -75,7 +73,7 @@ export default function SignIn({ onSignIn }) {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="ایمیل"
             name="email"
             autoComplete="email"
             autoFocus
@@ -86,15 +84,15 @@ export default function SignIn({ onSignIn }) {
             required
             fullWidth
             name="password"
-            label="Password"
+            label="رمز"
             type="password"
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
+          {/* <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
-          />
+          /> */}
           <Button
             type="submit"
             fullWidth
@@ -103,17 +101,17 @@ export default function SignIn({ onSignIn }) {
             className={classes.submit}
             onClick={onSignIn}
           >
-            Sign In  
+            لاگین
           </Button>
-          <Grid container>
+          {/* <Grid container>
             <Grid item>
               <Link to="/auth/signup">{"Don't have an account? Sign Up"}</Link>
             </Grid>
-          </Grid>
+          </Grid> */}
         </form>
       </div>
       <Box mt={8}>
-        // <Copyright />
+        <Copyright />
       </Box>
     </Container>
   );

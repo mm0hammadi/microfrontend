@@ -67,7 +67,8 @@ export default function Header({ isSignedIn, onSignOut }) {
     <React.Fragment>
       <AppBar
         position="static"
-        color="default"
+        // color="default"
+        style={{ background: "blue", color: "white" }}
         elevation={0}
         className={classes.appBar}
       >
@@ -79,17 +80,28 @@ export default function Header({ isSignedIn, onSignOut }) {
             component={RouterLink}
             to="/"
           >
-            App
+            میکروفرانت اند
+          </Typography>
+
+          <Typography
+            variant="h6"
+            color="inherit"
+            noWrap
+            component={RouterLink}
+            to="/"
+          >
+            منوها
           </Typography>
           <Button
-            color="primary"
+            style={{ background: "white", color: "black" }}
+            // color="primary"
             variant="outlined"
             className={classes.link}
             component={RouterLink}
             to={isSignedIn ? "/" : "/auth/signin"}
             onClick={onClick}
           >
-            {isSignedIn ? "Logout" : "Login"}
+            {isSignedIn ? "خروج" : "ورود"}
           </Button>
         </Toolbar>
       </AppBar>

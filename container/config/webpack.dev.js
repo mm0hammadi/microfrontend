@@ -18,9 +18,9 @@ const devConfig = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        cards: "cards@http://localhost:8081/remoteEntry.js",
-        auth: "auth@http://localhost:8082/remoteEntry.js",
-        bach: "bach@http://localhost:8083/remoteEntry.js",
+        card: "card@http://localhost:8081/remoteEntry.js",
+        batch: "batch@http://localhost:8082/remoteEntry.js",
+        auth: "auth@http://localhost:8083/remoteEntry.js",
       },
       shared: packageJson.dependencies,
     }),

@@ -72,70 +72,37 @@ const useStyles = makeStyles((theme) => ({
 
 const tiers = [
   {
-    title: "Free",
-    price: "0",
+    title: "عنوان اول ",
+    price: "1000",
     description: [
-      "10 users included",
-      "2 GB of storage",
-      "Help center access",
-      "Email support",
+      "لورم ایپسوم متن سا استفاده از طراحان گرافیک است.",
+      "ستفاده از طراحان گرافیک است",
+      "ستفاده از طراحان گرافیک است",
+      "ستفاده از طراحان گرافیک است",
     ],
-    buttonText: "Sign up for free",
-    buttonVariant: "outlined",
+    buttonText: "توضیخات کارت ",
   },
   {
-    title: "Pro",
-    subheader: "Most popular",
-    price: "15",
+    title: "عنوان دوم ",
+    price: "10400",
     description: [
-      "20 users included",
-      "10 GB of storage",
-      "Help center access",
-      "Priority email support",
+      "لورم ایپسوم متن سا استفاده از طراحان گرافیک است.",
+      "ستفاده از طراحان گرافیک است",
+      "ستفاده از طراحان گرافیک است",
+      "ستفاده از طراحان گرافیک است",
     ],
-    buttonText: "Get started",
-    buttonVariant: "contained",
+    buttonText: "توضیخات کارت ",
   },
   {
-    title: "Enterprise",
-    price: "30",
+    title: "عنوان سوم ",
+    price: "120",
     description: [
-      "50 users included",
-      "30 GB of storage",
-      "Help center access",
-      "Phone & email support",
+      "لورم ایپسوم متن سا استفاده از طراحان گرافیک است.",
+      "ستفاده از طراحان گرافیک است",
+      "ستفاده از طراحان گرافیک است",
+      "ستفاده از طراحان گرافیک است",
     ],
-    buttonText: "Contact us",
-    buttonVariant: "outlined",
-  },
-];
-const footers = [
-  {
-    title: "Company",
-    description: ["Team", "History", "Contact us", "Locations"],
-  },
-  {
-    title: "Features",
-    description: [
-      "Cool stuff",
-      "Random feature",
-      "Team feature",
-      "Developer stuff",
-      "Another one",
-    ],
-  },
-  {
-    title: "Resources",
-    description: [
-      "Resource",
-      "Resource name",
-      "Another resource",
-      "Final resource",
-    ],
-  },
-  {
-    title: "Legal",
-    description: ["Privacy policy", "Terms of use"],
+    buttonText: "توضیخات کارت ",
   },
 ];
 
@@ -153,7 +120,7 @@ const Pricing = () => {
           color="textPrimary"
           gutterBottom
         >
-          Pricing
+          اپ card
         </Typography>
         <Typography
           variant="h5"
@@ -161,9 +128,11 @@ const Pricing = () => {
           color="textSecondary"
           component="p"
         >
-          Quickly build an effective pricing table for your potential customers
-          with this layout. It&apos;s built with default Material-UI components
-          with little customization.
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+          متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+          درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
         </Typography>
       </Container>
       {/* End hero unit */}
@@ -192,10 +161,7 @@ const Pricing = () => {
                 <CardContent>
                   <div className={classes.cardPricing}>
                     <Typography component="h2" variant="h3" color="textPrimary">
-                      ${tier.price}
-                    </Typography>
-                    <Typography variant="h6" color="textSecondary">
-                      /mo
+                      {tier.price}
                     </Typography>
                   </div>
                   <ul>
@@ -214,7 +180,7 @@ const Pricing = () => {
                 <CardActions>
                   <Button
                     component={RouterLink}
-                    to="/auth/signup"
+                    to="/"
                     fullWidth
                     color="primary"
                   >
@@ -226,31 +192,6 @@ const Pricing = () => {
           ))}
         </Grid>
       </Container>
-      {/* Footer */}
-      <Container maxWidth="md" component="footer" className={classes.footer}>
-        <Grid container spacing={4} justifyContent="space-evenly">
-          {footers.map((footer) => (
-            <Grid item xs={6} sm={3} key={footer.title}>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                {footer.title}
-              </Typography>
-              <ul>
-                {footer.description.map((item) => (
-                  <li key={item}>
-                    <Link href="#" variant="subtitle1" color="textSecondary">
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Grid>
-          ))}
-        </Grid>
-        <Box mt={5}>
-          <Copyright />
-        </Box>
-      </Container>
-      {/* End footer */}
     </React.Fragment>
   );
 };

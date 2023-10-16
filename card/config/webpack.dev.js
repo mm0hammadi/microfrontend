@@ -18,10 +18,10 @@ const devConfig = {
   plugins: [
     new HtmlWebpackPlugin({ template: "./public/index.html" }),
     new ModuleFederationPlugin({
-      name: "cards",
+      name: "card",
       filename: "remoteEntry.js",
       exposes: {
-        "./MarketingApp": "./src/bootstrap",
+        "./CardApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
     }),
