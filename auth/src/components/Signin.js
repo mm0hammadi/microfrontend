@@ -25,6 +25,8 @@ function Copyright() {
   );
 }
 
+
+
 const useStyles = makeStyles((theme) => ({
   '@global': {
     a: {
@@ -101,7 +103,7 @@ export default function SignIn({ onSignIn }) {
             className={classes.submit}
             onClick={onSignIn}
           >
-            Sign In
+            Sign In  
           </Button>
           <Grid container>
             <Grid item>
@@ -111,7 +113,7 @@ export default function SignIn({ onSignIn }) {
         </form>
       </div>
       <Box mt={8}>
-        <Copyright />
+        // <Copyright />
       </Box>
     </Container>
   );
