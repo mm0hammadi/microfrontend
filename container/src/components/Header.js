@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link as RouterLink } from "react-router-dom";
+import Menu from "@mui/material/Menu";
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -54,6 +55,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const pages = [
+  {
+    page: "batch",
+    page: "dictionary",
+    page: "card",
+  },
+];
+
 export default function Header({ isSignedIn, onSignOut }) {
   const classes = useStyles();
 
@@ -83,7 +92,7 @@ export default function Header({ isSignedIn, onSignOut }) {
             میکروفرانت اند
           </Typography>
 
-          <Typography
+          {/* <Typography
             variant="h6"
             color="inherit"
             noWrap
@@ -91,7 +100,32 @@ export default function Header({ isSignedIn, onSignOut }) {
             to="/"
           >
             منوها
-          </Typography>
+          </Typography> */}
+
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            // open={Boolean(anchorElNav)}
+            // onClose={handleCloseNavMenu}
+            sx={{
+              display: { xs: "block", md: "none" },
+            }}
+          >
+            {pages.map((page) => (
+              <MenuItem key={page}>
+                <Typography textAlign="center">{page}</Typography>
+              </MenuItem>
+            ))}
+          </Menu>
           <Button
             style={{ background: "white", color: "black" }}
             // color="primary"
