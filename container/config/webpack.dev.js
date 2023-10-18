@@ -25,6 +25,10 @@ const devConfig = {
       shared: packageJson.dependencies,
     }),
   ],
+  optimization: {
+    moduleIds: "hashed",
+    minimize: false,
+  },
 };
 
 module.exports = merge(commonConfig, devConfig);

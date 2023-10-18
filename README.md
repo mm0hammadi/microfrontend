@@ -19,3 +19,7 @@ card > http://localhost:8081/
 auth > http://localhost:8083/
 
 
+
+- Connect multiple react apps to single parent app
+
+
