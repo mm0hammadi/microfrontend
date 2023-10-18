@@ -22,4 +22,8 @@ auth > http://localhost:8083/
 
 - Connect multiple react apps to single parent app
 
+    "build:card": "yarn workspace @microfrontends/card build",
+    "build:container": "yarn workspace @microfrontends/container build",
+    "build:batch": "yarn workspace @microfrontends/batch build",
+
 
