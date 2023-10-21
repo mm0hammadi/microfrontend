@@ -33,12 +33,21 @@ const App = () => {
         <Header isSignedIn={isSignedIn} onSignOut={() => setSignIn(false)} />
         <Suspense fallback={<Progress />}>
           <Switch>
+            <Route
+              path="/"
+              element={
+                <>
+                  CounterAppOne={CardLazy}
+                  CounterAppTwo={BatchLazy}
+                </>
+              }
+            />
             <Route path="/auth">
               <AuthLazy onSignIn={() => setSignIn(true)} />
             </Route>
             {/* <Route path="/auth/signup" component={AuthLazy} /> */}
-            <Route path="/" component={CardLazy} />
-            <Route path="/" component={BatchLazy} />
+            {/* <Route path="/" component={CardLazy} /> */}
+            <Route path="/batch" component={BatchLazy} />
           </Switch>
         </Suspense>
       </StylesProvider>
