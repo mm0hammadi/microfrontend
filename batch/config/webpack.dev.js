@@ -24,6 +24,10 @@ const devConfig = {
         "./BatchApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
+     react: {
+      eager: true,
+     },
+      
     }),
   ],
 };
